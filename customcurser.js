@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  if ("ontouchstart" in window || window.innerWidth < 768) {
+    const cursor = document.querySelector(".custom-curser");
+    if(cursor) cursor.style.display="none";
+    document.body.style.cursor="auto";
+    return;
+  }
+      
 
 const cursor = document.querySelector(".custom-cursor");
 
@@ -55,5 +62,6 @@ cursor.style.borderColor = "#7a5cff";
 });
 
 });
+
 
 });
